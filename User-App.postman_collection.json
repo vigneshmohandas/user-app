@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "7eada04c-c2e9-442b-adbc-8702792f7fee",
+		"name": "User-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"vignesh@gmail.com\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/account/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"vignesh@gmail.com\",\n    \"password\":\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/account/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"account",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "312"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"138-mGimJYNojp2HiIOFcrMbL9p5zOM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Dec 2020 05:09:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"5fc63da2050cd21e4b56b10e\",\n    \"email\": \"vignesh@gmail.com\",\n    \"name\": \"vignesh\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzYzZGEyMDUwY2QyMWU0YjU2YjEwZSIsImVtYWlsIjoidmlnbmVzaEBnbWFpbC5jb20iLCJpYXQiOjE2MDY4ODU3NzEsImV4cCI6MTYwNjg4NTgzMX0.qgqYR6gkPY35iTpsQDelAELLMvFrWFrZHWgbBuggFuM\",\n    \"expiresIn\": 60\n}"
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Vignesh\",\n    \"email\":\"vignesh5@gmail.com\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Vignesh\",\n    \"email\":\"vignesh5@gmail.com\",\n    \"password\":\"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4f-uuEXMkbStyvoSDx/vDkeXXObs/0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Dec 2020 05:10:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"5fc721e06c409323e58b7ff5\",\n    \"email\": \"vignesh5@gmail.com\",\n    \"name\": \"Vignesh\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzYzZGEyMDUwY2QyMWU0YjU2YjEwZSIsImVtYWlsIjoidmlnbmVzaEBnbWFpbC5jb20iLCJpYXQiOjE2MDY4ODU5MTcsImV4cCI6MTYwNjg4NTk3N30.GLnH-6hmCQV_eM_YaP2nqQ8XyceFpStKcWeKCnXvHMg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/5fc63da2050cd21e4b56b10e",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"5fc63da2050cd21e4b56b10e"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get User Details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/5fc63da2050cd21e4b56b10e",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"5fc63da2050cd21e4b56b10e"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bd-3tdYZ0RzXvuQK/m+2ha22ITSbjQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Dec 2020 05:12:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"5fc63da2050cd21e4b56b10e\",\n    \"name\": \"vignesh\",\n    \"email\": \"vignesh@gmail.com\",\n    \"createdAt\": \"2020-12-01T12:57:06.889Z\",\n    \"updatedAt\": \"2020-12-01T12:57:06.889Z\",\n    \"id\": \"5fc63da2050cd21e4b56b10e\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get user active tokens",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzYzZGEyMDUwY2QyMWU0YjU2YjEwZSIsImVtYWlsIjoidmlnbmVzaEBnbWFpbC5jb20iLCJpYXQiOjE2MDY4ODU5NzIsImV4cCI6MTYwNjg4NjAzMn0.HImL3Vu-6c_rvtDjp1uxAmgUxIyfowPviufOyyW5x1k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/5fc63da2050cd21e4b56b10e/tokens",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"5fc63da2050cd21e4b56b10e",
+						"tokens"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get user active tokens",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/5fc63da2050cd21e4b56b10e/tokens",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"5fc63da2050cd21e4b56b10e",
+								"tokens"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "511"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ff-zqKxnIun71QUGWm/w24ZLpm+pgo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Dec 2020 05:13:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzYzZGEyMDUwY2QyMWU0YjU2YjEwZSIsImVtYWlsIjoidmlnbmVzaEBnbWFpbC5jb20iLCJpYXQiOjE2MDY4ODU5MTcsImV4cCI6MTYwNjg4NTk3N30.GLnH-6hmCQV_eM_YaP2nqQ8XyceFpStKcWeKCnXvHMg\",\n        \"time\": \"2020-12-02T05:12:13.501Z\"\n    },\n    {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYzYzZGEyMDUwY2QyMWU0YjU2YjEwZSIsImVtYWlsIjoidmlnbmVzaEBnbWFpbC5jb20iLCJpYXQiOjE2MDY4ODU5NzIsImV4cCI6MTYwNjg4NjAzMn0.HImL3Vu-6c_rvtDjp1uxAmgUxIyfowPviufOyyW5x1k\",\n        \"time\": \"2020-12-02T05:12:52.157Z\"\n    }\n]"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
